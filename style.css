@@ -41,3 +41,14 @@ body::before {
         background-position: 100px 100px, 150px 100px, 100px 150px;
     }
 }
+
+.game-container {
+    background: rgba(0, 0, 0, 0.6);
+    border: 2px solid rgba(0, 255, 200, 0.6);
+    border-radius: 18px;
+    box-shadow: 0 0 25px rgba(0, 255, 170, 0.4);
+    padding: 30px 40px;
+    text-align: center;
+    width: 360px;
+    animation: fadeIn 1s ease;
+}
