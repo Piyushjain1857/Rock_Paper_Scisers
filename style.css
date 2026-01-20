@@ -4,3 +4,14 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle at top left, #001a1a, #000000 70%);
+    overflow: hidden;
+    color: #e8faff;
+}
