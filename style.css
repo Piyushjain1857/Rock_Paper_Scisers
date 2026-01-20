@@ -64,3 +64,12 @@ body::before {
         transform: scale(1);
     }
 }
+
+.title {
+    background: linear-gradient(90deg, #00d4ff, #00ff85);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    font-weight: 700;
+}
