@@ -19,3 +19,8 @@ choices.forEach(choice => {
         getResult(userChoice, computerChoice);
     });
 });
+
+function getResult(user, computer) {
+    if (user === computer) {
+        resultText.textContent = "It's a Draw 🤝";
+        resultText.style.color = "#ffcc33";
