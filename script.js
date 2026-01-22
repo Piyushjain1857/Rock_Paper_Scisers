@@ -39,3 +39,8 @@ function getResult(user, computer) {
     }
     updateScores();
 }
+
+function updateScores() {
+    userScoreDisplay.textContent = userScore;
+    computerScoreDisplay.textContent = computerScore;
+}
