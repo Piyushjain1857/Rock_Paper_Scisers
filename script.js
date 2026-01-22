@@ -24,3 +24,8 @@ function getResult(user, computer) {
     if (user === computer) {
         resultText.textContent = "It's a Draw 🤝";
         resultText.style.color = "#ffcc33";
+    } else if (
+        (user === "rock" && computer === "scissors") ||
+        (user === "paper" && computer === "rock") ||
+        (user === "scissors" && computer === "paper")
+    ) 
