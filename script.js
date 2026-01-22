@@ -28,4 +28,8 @@ function getResult(user, computer) {
         (user === "rock" && computer === "scissors") ||
         (user === "paper" && computer === "rock") ||
         (user === "scissors" && computer === "paper")
-    ) 
+    ) {
+        userScore++;
+        resultText.textContent = "You Win 🎉";
+        resultText.style.color = "#00ff85";
+    } 
