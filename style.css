@@ -104,3 +104,9 @@ body::before {
     color: #fff;
     font-weight: bold;
 }
+
+.choices {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
