@@ -44,3 +44,13 @@ function updateScores() {
     userScoreDisplay.textContent = userScore;
     computerScoreDisplay.textContent = computerScore;
 }
+
+resetBtn.addEventListener("click", () => {
+    userScore = 0;
+    computerScore = 0;
+    updateScores();
+    userChoiceDisplay.textContent = "–";
+    computerChoiceDisplay.textContent = "–";
+    resultText.textContent = "Let's Play!";
+    resultText.style.color = "#00ffe0";
+});
