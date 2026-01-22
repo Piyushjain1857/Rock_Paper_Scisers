@@ -9,3 +9,13 @@ const computerScoreDisplay = document.getElementById("computer-score");
 const options = ["rock", "paper", "scissors"];
 let userScore = 0;
 let computerScore = 0;
+
+choices.forEach(choice => {
+    choice.addEventListener("click", () => {
+        const userChoice = choice.getAttribute("data-choice");
+        const computerChoice = options[Math.floor(Math.random() * 3)];
+        userChoiceDisplay.textContent = userChoice;
+        computerChoiceDisplay.textContent = computerChoice;
+        getResult(userChoice, computerChoice);
+    });
+});
