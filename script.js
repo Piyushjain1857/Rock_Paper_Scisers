@@ -32,4 +32,10 @@ function getResult(user, computer) {
         userScore++;
         resultText.textContent = "You Win 🎉";
         resultText.style.color = "#00ff85";
-    } 
+    } else {
+        computerScore++;
+        resultText.textContent = "You Lose 😢";
+        resultText.style.color = "#ff4d4d";
+    }
+    updateScores();
+}
