@@ -73,3 +73,9 @@ body::before {
     color: transparent;
     font-weight: 700;
 }
+
+.subtitle {
+    color: #9fead8;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
