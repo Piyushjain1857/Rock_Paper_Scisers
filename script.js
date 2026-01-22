@@ -4,3 +4,4 @@ const computerChoiceDisplay = document.getElementById("computer-choice");
 const resultText = document.getElementById("result-text");
 const resetBtn = document.getElementById("reset");
 const userScoreDisplay = document.getElementById("user-score");
+const computerScoreDisplay = document.getElementById("computer-score");
