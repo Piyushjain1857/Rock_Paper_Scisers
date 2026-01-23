@@ -138,6 +138,14 @@ body::before {
 }
 
 .results {
-  margin-top: 10px;
-  font-size: 16px;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+#result-text {
+    font-size: 22px;
+    font-weight: 700;
+    color: #00ffe0;
+    margin-top: 10px;
+    animation: glow 2s infinite alternate;
 }
