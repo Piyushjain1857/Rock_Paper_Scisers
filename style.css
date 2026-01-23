@@ -171,3 +171,8 @@ body::before {
     font-weight: bold;
     transition: all 0.3s;
 }
+
+.reset-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255,100,100,0.6);
+}
