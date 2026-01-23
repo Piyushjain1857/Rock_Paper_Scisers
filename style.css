@@ -123,5 +123,11 @@ body::before {
     border-radius: 50%;
     width: 70px;
     height: 70px;
-
+    font-size: 30px;
+    color: #001a1a;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(0, 255, 200, 0.5);
+    transition:
+        transform 0.2s,
+        box-shadow 0.3s;
 }
