@@ -163,5 +163,7 @@ body::before {
 .reset-btn {
   margin-top: 20px;
   background: linear-gradient(90deg, #ff4d4d, #ff9966);
+  color: white;
+  border: none;
 
 }
