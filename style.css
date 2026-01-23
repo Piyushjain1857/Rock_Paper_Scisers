@@ -159,3 +159,9 @@ body::before {
         text-shadow: 0 0 20px #00ff85;
     }
 }
+
+.reset-btn {
+  margin-top: 20px;
+  background: linear-gradient(90deg, #ff4d4d, #ff9966);
+
+}
