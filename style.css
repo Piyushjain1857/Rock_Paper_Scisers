@@ -131,3 +131,8 @@ body::before {
         transform 0.2s,
         box-shadow 0.3s;
 }
+
+.choice:hover {
+    transform: scale(1.15);
+    box-shadow: 0 0 25px rgba(0, 255, 200, 0.8);
+}
