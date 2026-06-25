@@ -176,3 +176,258 @@ body::before {
     transform: scale(1.05);
     box-shadow: 0 0 15px rgba(255, 100, 100, 0.6);
 }
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Poppins",sans-serif;
+}
+
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    background:radial-gradient(circle at top left,#002b2b,#000);
+    overflow:hidden;
+    color:#fff;
+}
+
+/* Animated Background */
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background:
+        radial-gradient(circle at 10% 20%,rgba(0,255,200,.18) 3px,transparent 4px),
+        radial-gradient(circle at 80% 40%,rgba(0,200,255,.18) 3px,transparent 4px),
+        radial-gradient(circle at 35% 85%,rgba(255,0,180,.15) 3px,transparent 4px);
+    background-size:160px 160px;
+    animation:bgMove 18s linear infinite;
+    z-index:-1;
+}
+
+@keyframes bgMove{
+    from{
+        background-position:0 0,80px 0,0 80px;
+    }
+    to{
+        background-position:160px 160px,240px 160px,160px 240px;
+    }
+}
+
+/* Main Card */
+
+.game-container{
+    width:430px;
+    max-width:92%;
+    padding:35px;
+    border-radius:22px;
+    background:rgba(20,20,25,.72);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(0,255,180,.35);
+    box-shadow:
+        0 0 35px rgba(0,255,180,.25),
+        inset 0 0 10px rgba(255,255,255,.05);
+    text-align:center;
+    animation:fadeIn .8s ease;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(20px) scale(.95);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0) scale(1);
+    }
+}
+
+/* Heading */
+
+.title{
+    font-size:30px;
+    font-weight:700;
+    background:linear-gradient(90deg,#00d4ff,#00ff88);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    margin-bottom:10px;
+}
+
+.subtitle{
+    color:#b8fff1;
+    margin-bottom:25px;
+    font-size:15px;
+}
+
+/* Scoreboard */
+
+.scoreboard{
+    display:flex;
+    justify-content:space-between;
+    gap:18px;
+    margin-bottom:28px;
+}
+
+.score-box{
+    flex:1;
+    padding:18px;
+    border-radius:15px;
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.08);
+    transition:.3s;
+}
+
+.score-box:hover{
+    transform:translateY(-3px);
+    box-shadow:0 0 20px rgba(0,255,180,.18);
+}
+
+.score-box h3{
+    color:#00ffd0;
+    margin-bottom:10px;
+    font-size:16px;
+}
+
+.score-box span{
+    font-size:30px;
+    font-weight:bold;
+}
+
+/* Choice Buttons */
+
+.choices{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    margin:30px 0;
+}
+
+.choice{
+    width:82px;
+    height:82px;
+    border:none;
+    border-radius:50%;
+    cursor:pointer;
+    font-size:36px;
+    background:linear-gradient(135deg,#00d4ff,#00ff88);
+    color:#002222;
+    transition:.3s;
+    box-shadow:0 10px 20px rgba(0,255,180,.25);
+}
+
+.choice:hover{
+    transform:translateY(-8px) scale(1.08);
+    box-shadow:0 18px 35px rgba(0,255,180,.45);
+}
+
+.choice:active{
+    transform:scale(.92);
+}
+
+/* Results */
+
+.results{
+    margin-top:15px;
+}
+
+.results p{
+    margin:12px 0;
+    font-size:17px;
+}
+
+.results span{
+    color:#00ffd5;
+    font-weight:600;
+}
+
+#result-text{
+    margin:22px 0;
+    font-size:28px;
+    color:#00ffb7;
+    animation:glow 1.8s infinite alternate;
+}
+
+@keyframes glow{
+    from{
+        text-shadow:0 0 10px #00ff88;
+    }
+    to{
+        text-shadow:
+            0 0 18px #00ff88,
+            0 0 30px #00ffd5;
+    }
+}
+
+/* Reset Button */
+
+.reset-btn{
+    padding:12px 24px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:16px;
+    font-weight:600;
+    color:#fff;
+    background:linear-gradient(135deg,#ff4b4b,#ff8c42);
+    transition:.3s;
+    box-shadow:0 10px 20px rgba(255,80,80,.25);
+}
+
+.reset-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 15px 30px rgba(255,80,80,.45);
+}
+
+.reset-btn:active{
+    transform:scale(.96);
+}
+
+/* Responsive */
+
+@media(max-width:500px){
+
+    .game-container{
+        width:95%;
+        padding:25px;
+    }
+
+    .title{
+        font-size:24px;
+    }
+
+    .subtitle{
+        font-size:14px;
+    }
+
+    .scoreboard{
+        gap:10px;
+    }
+
+    .score-box{
+        padding:14px;
+    }
+
+    .score-box span{
+        font-size:24px;
+    }
+
+    .choice{
+        width:68px;
+        height:68px;
+        font-size:30px;
+    }
+
+    #result-text{
+        font-size:22px;
+    }
+
+    .reset-btn{
+        width:100%;
+    }
+}
