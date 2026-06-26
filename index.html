@@ -33,9 +33,9 @@
 
         <div class="header">
 
-            <h1>Rock Paper Scissors</h1>
+            <h1 class="title">Rock Paper Scissors</h1>
 
-            <p>Can you beat the computer?</p>
+            <p class="subtitle">Can you beat the computer?</p>
 
         </div>
 
@@ -65,28 +65,19 @@
 
         <div class="choices">
 
-            <button
-                class="choice"
-                data-choice="rock"
-                aria-label="Rock">
+            <button class="choice" data-choice="rock" aria-label="Rock">
 
                 🪨
 
             </button>
 
-            <button
-                class="choice"
-                data-choice="paper"
-                aria-label="Paper">
+            <button class="choice" data-choice="paper" aria-label="Paper">
 
                 📄
 
             </button>
 
-            <button
-                class="choice"
-                data-choice="scissors"
-                aria-label="Scissors">
+            <button class="choice" data-choice="scissors" aria-label="Scissors">
 
                 ✂️
 
@@ -103,7 +94,7 @@
                 <h4>You</h4>
 
                 <div id="user-icon" class="battle-icon">
-                    ❔
+                    <span id="user-choice">❔</span>
                 </div>
 
             </div>
@@ -119,7 +110,7 @@
                 <h4>Computer</h4>
 
                 <div id="computer-icon" class="battle-icon">
-                    ❔
+                    <span id="computer-choice">❔</span>
                 </div>
 
             </div>
@@ -130,17 +121,9 @@
 
         <div class="results">
 
-            <h2 id="result-text">
+            <h2 id="result-text" role="status" aria-live="polite">Let's Play!</h2>
 
-                Let's Play!
-
-            </h2>
-
-            <p id="round-message">
-
-                Choose Rock, Paper or Scissors
-
-            </p>
+            <p id="round-message">Choose Rock, Paper or Scissors</p>
 
         </div>
 
@@ -148,24 +131,20 @@
 
         <div class="controls">
 
-            <button
-                id="reset"
-                class="reset-btn">
+            <button id="reset" class="reset-btn">
 
                 🔄 Reset Game
 
             </button>
 
         </div>
-
+        
     </div>
 
     <!-- Footer -->
 
-    <footer>
-
-        Made with ❤️ using HTML • CSS • JavaScript
-
+    <footer class="footer">
+        <p>Made with Piyush Jain</p>
     </footer>
 
     <script src="script.js"></script>

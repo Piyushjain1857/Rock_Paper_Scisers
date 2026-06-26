@@ -14,8 +14,10 @@ choices.forEach(choice => {
     choice.addEventListener("click", () => {
         const userChoice = choice.getAttribute("data-choice");
         const computerChoice = options[Math.floor(Math.random() * 3)];
-        userChoiceDisplay.textContent = userChoice;
-        computerChoiceDisplay.textContent = computerChoice;
+        // Use emoji icons for display
+        const icons = { rock: '🪨', paper: '📄', scissors: '✂️' };
+        userChoiceDisplay.textContent = icons[userChoice] || userChoice;
+        computerChoiceDisplay.textContent = icons[computerChoice] || computerChoice;
         getResult(userChoice, computerChoice);
     });
 });
@@ -49,8 +51,8 @@ resetBtn.addEventListener("click", () => {
     userScore = 0;
     computerScore = 0;
     updateScores();
-    userChoiceDisplay.textContent = "–";
-    computerChoiceDisplay.textContent = "–";
+    userChoiceDisplay.textContent = '❔';
+    computerChoiceDisplay.textContent = '❔';
     resultText.textContent = "Let's Play!";
     resultText.style.color = "#00ffe0";
 });
