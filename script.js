@@ -14,10 +14,25 @@ choices.forEach(choice => {
     choice.addEventListener("click", () => {
         const userChoice = choice.getAttribute("data-choice");
         const computerChoice = options[Math.floor(Math.random() * 3)];
+        
         // Use emoji icons for display
         const icons = { rock: '🪨', paper: '📄', scissors: '✂️' };
+        
+        // Remove animation class to restart it
+        userChoiceDisplay.parentElement.classList.remove('pop-in');
+        computerChoiceDisplay.parentElement.classList.remove('pop-in');
+        
+        // Force reflow
+        void userChoiceDisplay.parentElement.offsetWidth;
+        
+        // Update content
         userChoiceDisplay.textContent = icons[userChoice] || userChoice;
         computerChoiceDisplay.textContent = icons[computerChoice] || computerChoice;
+        
+        // Add animation class
+        userChoiceDisplay.parentElement.classList.add('pop-in');
+        computerChoiceDisplay.parentElement.classList.add('pop-in');
+        
         getResult(userChoice, computerChoice);
     });
 });
@@ -25,7 +40,7 @@ choices.forEach(choice => {
 function getResult(user, computer) {
     if (user === computer) {
         resultText.textContent = "It's a Draw 🤝";
-        resultText.style.color = "#ffcc33";
+        resultText.style.color = "var(--warning)";
     } else if (
         (user === "rock" && computer === "scissors") ||
         (user === "paper" && computer === "rock") ||
@@ -33,11 +48,11 @@ function getResult(user, computer) {
     ) {
         userScore++;
         resultText.textContent = "You Win 🎉";
-        resultText.style.color = "#00ff85";
+        resultText.style.color = "var(--success)";
     } else {
         computerScore++;
         resultText.textContent = "You Lose 😢";
-        resultText.style.color = "#ff4d4d";
+        resultText.style.color = "var(--danger)";
     }
     updateScores();
 }
@@ -51,8 +66,13 @@ resetBtn.addEventListener("click", () => {
     userScore = 0;
     computerScore = 0;
     updateScores();
+    
+    // Remove pop-in class
+    userChoiceDisplay.parentElement.classList.remove('pop-in');
+    computerChoiceDisplay.parentElement.classList.remove('pop-in');
+    
     userChoiceDisplay.textContent = '❔';
     computerChoiceDisplay.textContent = '❔';
     resultText.textContent = "Let's Play!";
-    resultText.style.color = "#00ffe0";
+    resultText.style.color = "var(--primary-glow)";
 });
